@@ -2,7 +2,8 @@ pipeline {
     agent any 
     stages {
         stage('Development') { 
-            steps {                 
+            steps {
+                bat '''cls
                 @ECHO OFF
                 ECHO. ***********************************
                 ECHO. ** Executing Scripts **
