@@ -15,7 +15,7 @@ pipeline {
         }
         stage('QA') { 
             steps { 
-                bat returnStdout: true, script: '''cls
+                bat '''cls
                 @ECHO OFF
                 ECHO. ***********************************
                 ECHO. ** Executing Scripts **
@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Production') { 
             steps { 
-                bat returnStdout: true, script: '''cls
+                bat '''cls
                 @ECHO OFF
                 ECHO. ***********************************
                 ECHO. ** Executing Scripts **
