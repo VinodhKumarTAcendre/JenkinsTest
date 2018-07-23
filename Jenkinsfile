@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'bat returnStdout: true, script: \'\'\'cls                 @ECHO OFF                 ECHO. ***********************************                 ECHO. ** Executing Scripts **                 ECHO. *******************************                 Call "C:\\\\Program Files (x86)\\\\HP Inc\\\\ReadBookingReferenceIDApplication\\\\ReadBookingReferenceID.exe" C:\\\\Users\\\\vinodh.kt\\\\Desktop\\\\AutomationDetailedSummaryReport.html                 cls                 EXIT\'\'\'', returnStatus: true, returnStdout: true)
+        bat returnStdout: true, script: '''cls
+                @ECHO OFF
+                ECHO. ***********************************
+                ECHO. ** Executing Scripts **
+                ECHO. *******************************
+                Call "C:\\Program Files (x86)\\HP Inc\\ReadBookingReferenceIDApplication\\ReadBookingReferenceID.exe" C:\\Users\\vinodh.kt\\Desktop\\AutomationDetailedSummaryReport.html
+                cls
+                EXIT'''
       }
     }
   }
