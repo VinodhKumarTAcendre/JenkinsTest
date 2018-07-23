@@ -2,8 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        bat returnStdout: true, script: '''cls
+      steps {        
                 @ECHO OFF
                 ECHO. ***********************************
                 ECHO. ** Executing Scripts **
